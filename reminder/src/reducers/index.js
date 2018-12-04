@@ -26,7 +26,7 @@ const reminder = action => {
 // };
 //above is before store in cookie
 
-const reminders = (state = read_cookie("reminders"), action = {}) => {
+const reminders = (state = read_cookie("reminders") || [], action = {}) => {
   let reminders = null; //each case return, keep in the cookie
 
   switch (action.type) {
